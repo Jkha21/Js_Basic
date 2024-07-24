@@ -7,7 +7,7 @@ function f2() {
 }
 
 function main() {
-    console.log('main');
+    console.log('main');Promise_Obj
     
     setTimeout(f1, 0);
     // Promise Object 
