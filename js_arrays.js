@@ -1,57 +1,41 @@
-const fetchData = new Promise((resolve, reject) => {
-    // Simulate an asynchronous operation (e.g., fetching data)
-    setTimeout(() => {
-        const success = true;
-        if (success) {
-            resolve('Data fetched successfully');
-        } else {
-            reject('Error fetching data');
-        }
-    }, 1000); // Simulating a delay of 1 second
-});
+let arr = [1, 2, 3, 4, 5];
 
-// Creating a Promise
+// Simple Array 
 
-fetchData
-    .then((data) => {
-        console.log(data); // Output: "Data fetched successfully-
-    })
-    .catch((error) => {
-        console.error(error); // Output: "Error fetching data"
-    });
+let arr_1 = [1, 2, 3];
+arr_1.push(4); // arr is now [1, 2, 3, 4]   
 
-// Consuming a Promise
+let arr_2 = [1, 2, 3];
+arr_2.pop(); // arr is now [1, 2]
 
-fetchData
-    .then((data) => {
-        return processData(data); // Returns another promise
-    })
-    .then((processedData) => {
-        console.log('Processed data:', processedData);
-        return updateDatabase(processedData); // Returns another promise
-    })
-    .then(() => {
-        console.log('Database updated successfully');
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
+let arr_3 = [1, 2, 3];
+arr_3.shift(); // arr is now [2, 3]
 
-//  Chaining a Promise
+let arr_4 = [1, 2, 3];
+arr_4.unshift(0); // arr is now [0, 1, 2, 3]
 
-const promise1 = fetch('/api/data1');
-const promise2 = fetch('/api/data2');
+let arr_5 = [1, 2, 3, 4];
+arr_4.splice(2, 1, 'a', 'b'); // arr is now [1, 2, 'a', 'b', 4]
 
-Promise.all([promise1, promise2])
-    .then((responses) => {
-        // Both promises resolved successfully
-        const [response1, response2] = responses;
-        console.log('Data 1:', response1);
-        console.log('Data 2:', response2);
-    })
-    .catch((error) => {
-        // One or more promises rejected
-        console.error('Error:', error);
-    });
+let arr_6 = [1, 2, 3, 4];
+let newArr = arr_6.slice(1, 3); // newArr is [2, 3]
 
-//  Using Promise.all()
+let arr_7 = [1, 2, 3];
+let squared = arr_7.map(x => x * x); // squared is [1, 4, 9]
+
+
+let arr_8 = [1, 2, 3, 4, 5];
+let even = arr_8.filter(x => x % 2 === 0); // even is [2, 4]
+
+
+let arr_9 = [1, 2, 3, 4];
+let sum = arr_9.reduce((acc, val) => acc + val, 0); // sum is 10
+
+
+
+
+
+
+
+
+
