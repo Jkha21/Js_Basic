@@ -3,7 +3,7 @@ let doubleQuoteString = "Hello, World!";
 let templateLiteralString = `Hello, World!`;
 
 // Simple String
-
+// abaabab
 // Methods of String
 
 let str = "Hello, World!";
