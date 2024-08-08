@@ -43,3 +43,14 @@ class MaxHeap {
         }
     }
 }
+
+
+const heap = new MaxHeap();
+
+heap.insert(10);
+heap.insert(20);
+heap.insert(5);
+
+console.log(heap.extractMax()); // Output: 20
+console.log(heap.extractMax()); // Output: 10
+console.log(heap.extractMax()); // Output: 5
